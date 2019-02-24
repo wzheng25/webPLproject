@@ -1,0 +1,28 @@
+.nav-brand {
+	font-size: 36px;
+	font-family: Impact;
+}
+
+.nav-item {
+	font-size: 22px;
+	vertical-align: middle;
+	font-family: Cambria;
+}
+
+p.about_us {
+	font-size: 22px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 30px;
+}
+
+h1.about_us {
+	padding-top: 15px;
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+form.form-inline {
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
