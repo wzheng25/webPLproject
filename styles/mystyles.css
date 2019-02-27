@@ -24,5 +24,20 @@ h1.about_us {
 
 form.form-inline {
 	padding-top: 20px;
-	padding-bottom: 10px;
+	padding-bottom: 60px;
+}
+
+form.comment {
+	text-align: left;
+	padding-left: 400px;
+	padding-right: 10px;
+}
+
+p.index_text {
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+img.stars {
+	padding-left: 30px;
 }
