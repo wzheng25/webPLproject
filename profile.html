@@ -9,13 +9,20 @@
 	<title>Profile</title>
 </head>
 
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
+
+
 <body>
 
 	<nav class="navbar navbar-expand-md" style="background-color: #F8C471;">
 
 
   <!-- Navbar Logo -->
-  <a class="navbar-brand" href="index.html">
+  <a class="navbar-brand" href="index.html" data-toggle="tooltip" data-placement="auto" title="Logo">
   	<img src="http://www.logospng.com/images/108/track-shoe-with-wings-clipart-best-108087.png" width="60px" height="60px" alt="Logo">
   </a>
 
@@ -30,7 +37,7 @@
     <!-- Links -->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="about_us.html">About Us</a>
+        <a class="nav-link" href="about_us.html" data-toggle="tooltip" data-placement="auto" title="Learn about the site">About Us</a>
       </li>
   </ul>
 </div>
@@ -38,7 +45,7 @@
 	<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
 	<ul class="navbar-nav ml-auto">
       <li class="nav-brand">
-        <a class="nav-link" href="index.html">Run Cville</a>
+        <a class="nav-link" href="index.html" data-toggle="tooltip" data-placement="auto" title="Homepage">Run Cville</a>
       </li>
   </ul>
  </div>
@@ -46,7 +53,7 @@
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
   	<ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="routes.html">Routes</a>
+        <a class="nav-link" href="routes.html" data-toggle="tooltip" data-placement="auto" title="Search for existing routes">Routes</a>
       </li>
   </ul>
 </div>
@@ -59,8 +66,8 @@
       	</a>
       </li>
       <li class="nav-item active">
-      	<a class="nav-link" href="sign_in.html">Sign in</a>
-      </li>
+      	<a class="nav-link" href="sign_in.html" data-toggle="tooltip" data-placement="auto" title="Sign in">Sign in</a>
+      </li>	
     </ul>
     <!-- Links -->
 
@@ -70,7 +77,6 @@
 </nav>
 
 </body>
-
 
 <body>
 	<p>
