@@ -15,10 +15,9 @@
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip(); 
 });
-</script>
+ </script>
 
-
-<body>
+<body onload="setFocus();">
 
 	<nav class="navbar navbar-expand-md" style="background-color: #F8C471;">
 
@@ -78,51 +77,52 @@ $(document).ready(function(){
 
 </nav>
 
-</body>
-
+<!-- Autofocus for search bar -->
 <script >
   function setFocus(){
     document.getElementById("searchbar").focus();
   }
 </script>
 
-<body onload="setFocus();">
+<form class="form-inline active-cyan-3 active-cyan-4">
+		<i class="fas fa-search" aria-hidden="true"></i>
+		<input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search for a route" aria-label="Search" id="searchbar">
+</form>
 
-	<form class="form-inline active-cyan-3 active-cyan-4">
-  		<i class="fas fa-search" aria-hidden="true"></i>
-  		<input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search for a route" aria-label="Search" id="searchbar">
-	</form>
+<p class="index_text">
+	Recently uploaded route:
+</p>
 
-	<p class="index_text">
-		Recently uploaded route:
-	</p>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-			<p>
-				<a class="nav-link" href="profile.html">Author: Test User</a>
-				<ul>
-					<li>5th Street Loop</li>
-					<li>2/26/2018</li>
-					<li>Distance: 4.68 miles</li>
-					<li>Terrain: Roads/Sidewalk</li>
-					<li>Traffic: Moderate</li>
-					<li>Difficulty: Intermediate</li>
-				</ul>
-				<img class="stars" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/4_stars.svg" width=200px height=40px">
-			</p>
-		</div>
-		<div class="col-md-8">
-			<p>
-				<img src="https://d2u2bkuhdva5j0.cloudfront.net/activities-v2/2/570x190.jpg@2x?request=dHJ1ZSAyMTczMDU1ODYw&signature=b573bf8298017562b46897a45481be6bb094c09afcd6ea9ae8445f8123d161d3&activityVersion=c4654e7 " width="570px" height="240px">
-			</p>
-		</div>
-		<form class="comment" method="post">
-			<input type="text" placeholder="Add a comment...">
-		</form>
-		<img src="http://pngimagesfree.com/speech_bubble/white_speech_bubble.png" width="30px" height="30px">
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+		<p>
+			<a class="nav-link" href="profile.html">Author: Test User</a>
+			<ul>
+				<li>5th Street Loop</li>
+				<li>2/26/2018</li>
+				<li>Distance: 4.68 miles</li>
+				<li>Terrain: Roads/Sidewalk</li>
+				<li>Traffic: Moderate</li>
+				<li>Difficulty: Intermediate</li>
+			</ul>
+			<!-- <img class="stars" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/4_stars.svg" width=200px height=40px"> -->
+			<img class="stars" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/4_stars.svg" width=55% height=13%">
+		</p>
 	</div>
+	<div class="col-md-8">
+		<p>
+			<!-- <img src="https://d2u2bkuhdva5j0.cloudfront.net/activities-v2/2/570x190.jpg@2x?request=dHJ1ZSAyMTczMDU1ODYw&signature=b573bf8298017562b46897a45481be6bb094c09afcd6ea9ae8445f8123d161d3&activityVersion=c4654e7 " width="570px" height="240px"> -->
+
+			<img src="https://d2u2bkuhdva5j0.cloudfront.net/activities-v2/2/570x190.jpg@2x?request=dHJ1ZSAyMTczMDU1ODYw&signature=b573bf8298017562b46897a45481be6bb094c09afcd6ea9ae8445f8123d161d3&activityVersion=c4654e7 " width="80%" height="20%">
+
+		</p>
+	</div>
+	<form class="comment" method="post">
+		<input type="text" placeholder="Add a comment...">
+	</form>
+	<img src="http://pngimagesfree.com/speech_bubble/white_speech_bubble.png" width="30px" height="30px">
+</div>
 </body>
 </html>
 
