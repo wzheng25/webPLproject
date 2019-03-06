@@ -46,3 +46,109 @@ form.login {
 	padding-left: 20px;
 
 }
+
+/* Overall Route Class */
+.routeProfile {
+    width: 1000px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding:0px;
+    margin: 0 auto;
+    display: flex;  
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+    transition: transform .2s;
+    background: white;
+}
+.routeProfile > * {
+    padding: 0px;
+    flex: 1 100%;
+}
+
+/* Cancels out html link styling, can be changed */
+.routeProfile-link {
+    font-family: "arial";
+    color: black;
+    text-decoration: none;
+}
+.routeProfile-link:hover {
+    color: black;
+    text-decoration: none;
+}
+
+/* Hover over div effects */
+.routeProfile:hover {
+    cursor: pointer;
+    -webkit-box-shadow:0 0 40px black; 
+    -moz-box-shadow: 0 0 40px black; 
+    box-shadow:0 0 40px black;
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+/* Handle map image div and img properties */
+.routeProfile .map {
+    text-align:right;
+    padding-left: 15px;
+}
+.routeProfile img {
+    width: 75%;
+}
+
+/* Bottom two handle left aside html elements (route name, route address, date, etc.) */
+.routeProfile h1 {
+    font-size: 30px;
+    text-align:left;
+}
+.routeProfile .aside {
+    padding-left: 20px;
+    background: white;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    min-width: 20%;
+}
+
+/* Flex Ordering */
+@media all and (min-width: 650px) {
+    .aside { flex: 1 0 0; }
+}
+@media all and (min-width: 650px) {
+    .map       { flex: 2 0px; }
+    .aside  { order: 1; } 
+    .map       { order: 2; }
+}
+
+/* Dynamic UI */
+@media all and (max-width: 1050px) {
+    .routeProfile {
+        width: 700px;
+    }
+    .routeProfile .map {
+        text-align:right;
+    }
+    .routeProfile img {
+        width: 100%;
+    }
+}
+@media all and (max-width: 650px) {
+    .routeProfile {
+        width: 400px;
+    }
+    .routeProfile .aside {
+        background: transparent;
+        font-size: 13px;
+        
+    }
+    .routeProfile .map {
+        text-align:center;
+        padding: 0;
+    }
+    .routeProfile img {
+        width: 100%;
+    }
+}
