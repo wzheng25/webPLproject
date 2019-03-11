@@ -77,17 +77,18 @@ $(document).ready(function(){
 </nav>
 
 
-	<form action="#" id=login>
+  <!-- Sign in Form -->
+	<form action="" id=login style="text-align:center; padding-top: 100px;">
   Username:
   <input type="Username" name="Username">
   <br>
   <br>
   Password:
   <input id="password" type="password" name="Password">
-  <p class="warning" id="warning" style="display:none; color:red; font-weight: bold;";> Caps lock is on! </p>
+  <span class="warning" id="warning" style="display:none; color:red; font-weight: bold;";> Caps lock is on! </span>
   <br>
   <br>
-  <input type="submit" value="Login">
+  <input type="submit" href="index.html" value="Login">
 </form> 
 
 </body>
@@ -95,15 +96,15 @@ $(document).ready(function(){
 <script>
 var input = document.getElementById("password");
 
-// Get the warning text
+// Get warning
 var warning = document.getElementById("warning");
 
-// When the user presses any key on the keyboard, run the function
+// When any key is pressed, call the function
 input.addEventListener("keyup", function(event) {
 
-  // If "caps lock" is pressed, display the warning text
+  // If caps lock is pressed, display a warning
   if (event.getModifierState("CapsLock")) {
-    warning.style.display = "block";
+    warning.style.display = "inline";
   } else {
     warning.style.display = "none"
   }
