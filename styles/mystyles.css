@@ -43,10 +43,12 @@ form.form-inline {
   cursor: pointer;
 }
 
+/* Comment CSS Style and Hide/Display feature */
 form.comment {
 	text-align: left;
 	padding-left: 400px;
 	padding-right: 10px;
+
 }
 
 .hide{
@@ -174,4 +176,9 @@ form.login {
     .routeProfile img {
         width: 100%;
     }
+}
+
+/* Routes.html */
+.routeButtons {
+    text-align:center;
 }
