@@ -31,6 +31,18 @@ form.form-inline {
 	padding-bottom: 60px;
 }
 
+.btn {
+  float: left;
+  width: 20%;
+  padding: 3px;
+  background: #F8C471;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
 form.comment {
 	text-align: left;
 	padding-left: 400px;
