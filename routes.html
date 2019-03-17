@@ -89,13 +89,73 @@ $(document).ready(function(){
 </form>
 
 <div class="routeButtons">
-<button class="browseBtn" >Browse Routes</button>
-<button class="uploadBtn" >Upload Routes</button>
-
+<button class="browseBtn">Browse Routes</button>
+<button class="uploadBtn" onclick="onButtonClick()">Upload Routes</button>
 </div>
+
+<script>
+  /* For hiding/displaying form for uploading a route */
+  function onButtonClick(){
+    document.getElementById("uploadRouteDiv").className="show";
+  }
+</script>
+
+<div id="uploadRouteDiv" input class = "hide">
+  <h3 align="center">Route Details</h3>
+  <form>
+    <label><b>Route Name</b></label>
+    <input type="text" name="routeName_input" id="routeName_input">
+    <br>
+
+    <label><b>Date</b></label>
+    <input type="text" name="date_input" id="date_input">
+    <br>
+
+    <label><b>Distance</b></label>
+    <input type="text" name="distance_input" id="distance_input">
+    <br>
+
+    <label><b>Terrain</b></label>
+    <input type="text" name="terrain_input" id="terrain_input">
+    <br>
+
+    <label><b>Traffic</b></label>
+    <input type="text" name="traffic_input" id="traffic_input">
+    <br>
+
+
+    <label><b>Difficulty:</b></label>
+    <select id="difficulty_input" name="difficulty_input">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+                <option value="Challenging">Challenging</option>
+    </select>
+
+
+  </form>
+
+  <input type="submit" onclick="showInput();"><br/>
+  <p><span id='display'></span></p>
+</div>
+
+<script>
+    /* For Displaying User Input Data from Upload Routes */
+    function showInput() {
+        document.getElementById('display').innerHTML = "Your Submission: " + "<br>" +
+                "Route Name: " + document.getElementById("routeName_input").value + "<br>" +
+                    "Date: " + document.getElementById("date_input").value + "<br>" +
+                    "Distance: " + document.getElementById("distance_input").value + "<br>" + 
+                    "Terrain: " + document.getElementById("terrain_input").value + "<br>" +
+                    "Traffic: " + document.getElementById("traffic_input").value + "<br>" +
+                    "Difficulty: " + document.getElementById("difficulty_input").value;
+
+    }
+</script>
+
 
 <p>
 	Route 1
 </p>
 </body>
-
+</html>
