@@ -37,6 +37,13 @@ form.comment {
 	padding-right: 10px;
 }
 
+.hide{
+    display:none;
+}
+.show{
+    display:block;
+}
+
 p.index_text {
 	text-align: center;
 	padding-bottom: 30px;
