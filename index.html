@@ -10,32 +10,34 @@
 
 </head>
 
-<!-- Enable Tooltips in document- source: https://www.w3schools.com/bootstrap/bootstrap_tooltip.asp -->
+<!-- Enable Tooltips in document (hovering over navbar items will display text) - source: https://www.w3schools.com/bootstrap/bootstrap_tooltip.asp -->
 <script>
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip(); 
 });
  </script>
 
+<!-- Set focus on searchbar on load -->
 <body onload="setFocus();">
 
 	<nav class="navbar navbar-expand-md" style="background-color: #F8C471;">
 
 
   <!-- Navbar Logo -->
+  <!-- Image source: http://www.logospng.com/images/108/track-shoe-with-wings-clipart-best-108087.png" -->
   <a class="navbar-brand" href="index.html" data-toggle="tooltip" data-placement="auto" title="Logo">
   	<img src="http://www.logospng.com/images/108/track-shoe-with-wings-clipart-best-108087.png" width="60px" height="60px" alt="Logo">
   </a>
 
   <!-- Collapse button --> 
   <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-        class="fas fa-bars fa-1x"></i></span></button>
+    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text">
+    	<i class="fas fa-bars fa-1x"></i></span></button>
 
   <!-- Collapsible content -->
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
 
-    <!-- Links -->
+    <!-- About Us Item -->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
         <a class="nav-link" href="about_us.html" data-toggle="tooltip" data-placement="auto" title="Learn about the site">About Us</a>
@@ -43,6 +45,7 @@ $(document).ready(function(){
   </ul>
 </div>
 	
+	<!-- Page Name -->
 	<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
 	<ul class="navbar-nav ml-auto">
       <li class="nav-brand">
@@ -51,6 +54,7 @@ $(document).ready(function(){
   </ul>
  </div>
 
+ 	<!-- Routes Item -->
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
   	<ul class="navbar-nav ml-auto">
       <li class="nav-item active">
@@ -59,6 +63,7 @@ $(document).ready(function(){
   </ul>
 </div>
 
+	<!-- Sign In Button and Profile Image -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
@@ -84,6 +89,7 @@ $(document).ready(function(){
   }
 </script>
 
+<!-- Searchbar -->
 <form class="form-inline active-cyan-3 active-cyan-4">
 		<i class="fas fa-search" aria-hidden="true"></i>
 		<input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search for a route" aria-label="Search" id="searchbar">
@@ -94,6 +100,7 @@ $(document).ready(function(){
 	Recently uploaded route:
 </p>
 
+<!-- Example Route -->
 <div class="container">
 	<div class="row">
 		<div class="col-md-4">
@@ -107,22 +114,21 @@ $(document).ready(function(){
 				<li>Traffic: Moderate</li>
 				<li>Difficulty: Intermediate</li>
 			</ul>
-			<!-- <img class="stars" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/4_stars.svg" width=200px height=40px"> -->
 			<img class="stars" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/4_stars.svg" width=55% height=13%">
 		</p>
 	</div>
 	<div class="col-md-8">
 		<p>
-			<!-- <img src="https://d2u2bkuhdva5j0.cloudfront.net/activities-v2/2/570x190.jpg@2x?request=dHJ1ZSAyMTczMDU1ODYw&signature=b573bf8298017562b46897a45481be6bb094c09afcd6ea9ae8445f8123d161d3&activityVersion=c4654e7 " width="570px" height="240px"> -->
-
 			<img src="https://d2u2bkuhdva5j0.cloudfront.net/activities-v2/2/570x190.jpg@2x?request=dHJ1ZSAyMTczMDU1ODYw&signature=b573bf8298017562b46897a45481be6bb094c09afcd6ea9ae8445f8123d161d3&activityVersion=c4654e7 " width="80%" height="20%">
 
 		</p>
 	</div>
+	<!-- Add a comment form -->
 	<form class="comment" method="post">
 		<input class= "hide" input type="text" placeholder="Add a comment..." size = "45" id="commentbox">
 	</form>
 	<img src="http://pngimagesfree.com/speech_bubble/white_speech_bubble.png" width="30px" height="30px" id="commentImg" onclick = "onButtonClick()" />
+	<!-- Display textbox when message icon is clicked -->
 	<script>
 		onButtonClick = () => {
 			document.getElementById('commentbox').className="show";

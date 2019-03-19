@@ -69,7 +69,6 @@ img.stars {
 
 form.login {
 	padding-left: 20px;
-
 }
 
 /* Overall Route Class */
@@ -91,7 +90,7 @@ form.login {
     flex: 1 100%;
 }
 
-/* Cancels out html link styling, can be changed */
+/* Cancels out default html link styling*/
 .routeProfile-link {
     font-family: "arial";
     color: black;
@@ -118,11 +117,12 @@ form.login {
     text-align:right;
     padding-left: 15px;
 }
+/*Size image so it fits the box without leaving white space*/
 .routeProfile img {
-    width: 75%;
+    width: 95%;
 }
 
-/* Bottom two handle left aside html elements (route name, route address, date, etc.) */
+/* Handle left aside html elements (route name, date, etc.) */
 .routeProfile h1 {
     font-size: 30px;
     text-align:left;
@@ -148,7 +148,7 @@ form.login {
     .map       { order: 2; }
 }
 
-/* Dynamic UI */
+/* Dynamic UI: Resize map images and text when window becomes smaller*/
 @media all and (max-width: 1050px) {
     .routeProfile {
         width: 700px;

@@ -9,32 +9,34 @@
 	<title>About Us</title>
 </head>
 
+<!-- Enable Tooltips in document (hovering over navbar items will display text) - source: https://www.w3schools.com/bootstrap/bootstrap_tooltip.asp -->
 <script>
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip(); 
 });
-</script>
+ </script>
 
-
-<body>
+<!-- Set focus on searchbar on load -->
+<body onload="setFocus();">
 
 	<nav class="navbar navbar-expand-md" style="background-color: #F8C471;">
 
 
   <!-- Navbar Logo -->
+  <!-- Image source: http://www.logospng.com/images/108/track-shoe-with-wings-clipart-best-108087.png" -->
   <a class="navbar-brand" href="index.html" data-toggle="tooltip" data-placement="auto" title="Logo">
   	<img src="http://www.logospng.com/images/108/track-shoe-with-wings-clipart-best-108087.png" width="60px" height="60px" alt="Logo">
   </a>
 
   <!-- Collapse button --> 
   <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-        class="fas fa-bars fa-1x"></i></span></button>
+    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text">
+    	<i class="fas fa-bars fa-1x"></i></span></button>
 
   <!-- Collapsible content -->
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
 
-    <!-- Links -->
+    <!-- About Us Item -->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
         <a class="nav-link" href="about_us.html" data-toggle="tooltip" data-placement="auto" title="Learn about the site">About Us</a>
@@ -42,6 +44,7 @@ $(document).ready(function(){
   </ul>
 </div>
 	
+	<!-- Page Name -->
 	<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
 	<ul class="navbar-nav ml-auto">
       <li class="nav-brand">
@@ -50,6 +53,7 @@ $(document).ready(function(){
   </ul>
  </div>
 
+ 	<!-- Routes Item -->
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
   	<ul class="navbar-nav ml-auto">
       <li class="nav-item active">
@@ -58,6 +62,7 @@ $(document).ready(function(){
   </ul>
 </div>
 
+	<!-- Sign In Button and Profile Image -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
@@ -75,7 +80,6 @@ $(document).ready(function(){
   <!-- Collapsible content -->
 
 </nav>
-
 
 <h1 class=about_us>About Us</h1>
 	<p class=about_us>
