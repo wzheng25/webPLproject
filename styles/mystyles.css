@@ -31,6 +31,7 @@ form.form-inline {
 	padding-bottom: 60px;
 }
 
+/* Styling for the Search bar's button */
 .btn {
   float: left;
   width: 20%;
@@ -51,6 +52,7 @@ form.comment {
 
 }
 
+/* Sections with the input class set to these will either appear or stay hidden */
 .hide{
     display:none;
 }
@@ -178,7 +180,7 @@ form.login {
     }
 }
 
-/* Routes.html */
+/* Routes.html: aligning the two buttons together */
 .routeButtons {
     text-align:center;
 }

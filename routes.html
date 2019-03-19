@@ -102,11 +102,15 @@ $(document).ready(function(){
 
 <script>
   /* For hiding/displaying form for uploading a route */
+  /* Listener for the click event on the Upload Routes button */
   function onButtonClick(){
     document.getElementById("uploadRouteDiv").className="show";
   }
 </script>
 
+<!-- 
+The following section will be the HTML content of the form used to upload a route, which will take in user input and will be used by the javascript that follows this div section to display the user's submission. For now the input class is set to "hide" so that it doesn't immediately appear on the screen when the user is on the Routes page
+-->
 <div id="uploadRouteDiv" input class = "hide">
   <h3 align="center">Route Details</h3>
   <form class="RouteInfoInputs">
@@ -148,7 +152,7 @@ $(document).ready(function(){
 
 <script>
     /* For Displaying User Input Data from Upload Routes */
-    /* Anonymous Function example) */
+    /* Anonymous Function example */
     var showInput = function() {
         document.getElementById('display').innerHTML = "Your Submission: " + "<br>" +
                 "Route Name: " + document.getElementById("routeName_input").value + "<br>" +
@@ -161,8 +165,5 @@ $(document).ready(function(){
     }
 </script>
 
-<p>
-	Route 1
-</p>
 </body>
 </html>
