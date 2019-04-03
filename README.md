@@ -7,6 +7,7 @@ To-Do list:
 2. remember to add client-side form validation
 3. create db table
 4. everything in assignment 4
+5. complete login (maybe using google OAth)
 
 Server side stuff:
 1. fetch most recent time from db and put it on homepage
