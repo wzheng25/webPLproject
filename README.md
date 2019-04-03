@@ -11,6 +11,6 @@ To-Do list:
 Server side stuff:
 1. fetch most recent time from db and put it on homepage
 
-Stuff to do (not specified by assignment):
+Stuff to do not specified by the assignment:
 1. figure out a way to upload image
 2. click on image, taking you to post page
