@@ -8,21 +8,21 @@
 	
 	<title>Upload</title>
 
-  <script src="jquery-latest.min.js"></script>
+  <!-- Code to Insert Navbar -->
+  <script src="js/jquery-latest.min.js"></script>
   <script> 
    $(function(){
-      $('.header').load("navbar.html"); 
-      
+      $('.insertNavbar').load("navbar.html"); 
    });
-  </script> 
+  </script>
+  <!-- External JS file -->
+  <script src="js/external.js"></script>
 </head>
 
 
 <body>
-
 <div id="uploadRouteDiv">
-  
-  <div class="header"></div>
+  <div class="insertNavbar"></div> <!-- Navbar -->
   <h3 align="center" style="padding-top:20px">Route Details</h3>
       <form class="routeForm" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
 
