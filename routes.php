@@ -110,6 +110,8 @@ $(document).ready(function(){
 <!-- 
 The following section will be the HTML content of the form used to upload a route, which will take in user input and will be used by the javascript that follows this div section to display the user's submission. For now the input class is set to "hide" so that it doesn't immediately appear on the screen when the user is on the Routes page
 -->
+
+<!--
 <div id="uploadRouteDiv" input class = "hide">
   <h3 align="center">Route Details</h3>
       <form action="<?php $_SERVER['PHP_SELF'] ?>" method="GET">
@@ -119,7 +121,7 @@ The following section will be the HTML content of the form used to upload a rout
         <br>
 
         <label><b>Date</b></label>
-        <input type="text" name="date_input" id="date_input">
+        <input type="text" name="date_input" id="date_input" maxlength="10">
         <br>
 
         <label><b>Distance</b></label>
@@ -170,7 +172,7 @@ The following section will be the HTML content of the form used to upload a rout
 
     }
 </script>
-
+-->
 
 <?php
 

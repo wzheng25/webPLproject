@@ -95,9 +95,9 @@ $(document).ready(function(){
         <label><b>Route Name</b></label>
         <input type="text" name="routeName_input" id="routeName_input">
         <br>
-
+        
         <label><b>Date</b></label>
-        <input type="text" name="date_input" id="date_input">
+        <input type="text" name="date_input" id="date_input" maxlength="10">
         <br>
 
         <label><b>Distance</b></label>

@@ -10,6 +10,8 @@
 
 </head>
 
+<script src="external.js"></script>
+
 <!-- Enable Tooltips in document (hovering over navbar items will display text) - source: https://www.w3schools.com/bootstrap/bootstrap_tooltip.asp -->
 <script>
 $(document).ready(function(){
@@ -131,12 +133,7 @@ $(document).ready(function(){
 	</form>
   <!-- Img display textbox when message icon is clicked, after the onclick is activated -->
 	<img src="http://pngimagesfree.com/speech_bubble/white_speech_bubble.png" width="30px" height="30px" id="commentImg" onclick = "onButtonClick()" />
-	<script>
-    /* Script used by the onlick of the Comment bubble Img to generate the textbox */
-		onButtonClick = () => {
-			document.getElementById('commentbox').className="show";
-		}
-	</script>
+
 </div>
 </body>
 </html>
