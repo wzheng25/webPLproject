@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-signin-client_id" content="841498573297-5depti8v7fl65tuceu1t4eptdqavrt4v.apps.googleusercontent.com">
+  <meta name="google-signin-client_id" content="841498573297-3gk2m49j80fha913md4el35urgfk21rd.apps.googleusercontent.com">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="styles/mystyles.css"/>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -58,12 +58,13 @@
   function onSignIn(googleUser) {
     var id_token = googleUser.getAuthResponse().id_token;
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', "create_user.php");
+    xhr.open('POST', "./create_user.php");
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.send('idtoken=' + id_token);
     xhr.onload = function() {
+      console.log(xhr.responseText);
       // Redirect
-      window.location.assign('index.html');
+      //window.location.assign('index.html');
     }
   }
 </script>
@@ -77,6 +78,7 @@ var input = document.getElementById("password");
 var warning = document.getElementById("warning");
 
 // When any key is pressed, call the function
+/*
 input.addEventListener("keyup", function(event) {
 
   // If caps lock is pressed, display the warning
@@ -85,5 +87,5 @@ input.addEventListener("keyup", function(event) {
   } else {
     warning.style.display = "none"
   }
-});
+});*/
 </script>

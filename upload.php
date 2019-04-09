@@ -1,3 +1,7 @@
+<?php
+require('connect_DB.php');
+?>  
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,15 +31,15 @@
       <form class="routeForm" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
 
         <label><b>Route Name</b></label>
-        <input type="text" name="routeName_input" id="routeName_input">
+        <input type="text" name="routeName_input" id="routeName_input" value="Run">
         <br>
 
-        <label><b>Date (MM/DD/YYYY)</b></label>
-        <input type="text" name="date_input" id="date_input" maxlength="10">
+        <label><b>Date</b></label>
+        <input type="text" name="date_input" id="date_input" maxlength="10" placeholder="MM/DD/YYYY" value="06/12/2018">
         <br>
 
         <label><b>Distance</b></label>
-        <input type="number" name="distance_input" id="distance_input">
+        <input type="number" step=".1" name="distance_input" id="distance_input" value="4">
         <br>
 
         <label><b>Terrain</b></label>
@@ -69,7 +73,7 @@
         <br>
 
         <label><b>Route Image URL</b></label>
-        <input type="text" name="image_url_input" id="image_url_input">
+        <input type="text" name="image_url_input" id="image_url_input" value="google.com">
         <br>
 
         <input type="submit"><br/>
@@ -94,6 +98,25 @@
 </script>
 
 <?php
+
+function uploadRoute($name, $date, $distance, $terrain, $traffic, $difficulty, $image) {
+   global $db;
+    
+   $query = "INSERT INTO routes (name, date, distance, terrain, traffic, difficulty, image) VALUES (:name, :date, :distance, :terrain, :traffic, :difficulty, :image)";
+   $statement = $db->prepare($query);
+   $statement->bindValue(':name', $name);
+   $statement->bindValue(':date', $date);
+   $statement->bindValue(':distance', $distance);
+   $statement->bindValue(':terrain', $terrain);
+   $statement->bindValue(':traffic', $traffic);
+   $statement->bindValue(':difficulty', $difficulty);
+   $statement->bindValue(':image', $image);
+   $statement->execute();
+   $statement->closeCursor();
+}
+
+
+//Input validation
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
   if (empty($_POST['routeName_input'])) {
@@ -138,6 +161,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     exit("Please enter an image url");
   }
   $imageURL = $_POST['routeName_input'];
+
+  uploadRoute($routeName, $date, $distance, $terrain, $traffic, $difficulty, $imageURL);
 }
 ?>
 
