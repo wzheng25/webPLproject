@@ -30,7 +30,7 @@
         <input type="text" name="routeName_input" id="routeName_input">
         <br>
 
-        <label><b>Date</b></label>
+        <label><b>Date (MM/DD/YYYY)</b></label>
         <input type="text" name="date_input" id="date_input" maxlength="10">
         <br>
 
@@ -104,6 +104,23 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   if (empty($_POST['date_input']) || strlen($_POST['date_input']) != 10) {
     exit("Please enter a date in MM/DD/YYYY format");
   }
+
+  // Validate year
+  if ((substr($_POST['date_input'], -4) < 2000) || (substr($_POST['date_input'], -4) > 2019))  {
+    exit("Please enter a valid year.");
+  }
+
+  // Validate month
+  if ((substr($_POST['date_input'], 0, 2) < 01) || (substr($_POST['date_input'], 0, 2) > 12))  {
+    exit("Please enter a valid month.");
+  }
+
+
+  // Validate day
+  if ((substr($_POST['date_input'], 3, 5) < 1) || (substr($_POST['date_input'], 3, 5) > 31))  {
+    exit("Please enter a valid day.");
+  }  
+
   $date = $_POST['date_input'];
 
   if (empty($_POST['distance_input'])) {
