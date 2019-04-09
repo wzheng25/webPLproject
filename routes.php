@@ -48,58 +48,11 @@
     document.getElementById("uploadRouteDiv").className="show";
   }
 </script>
+</body>
+</html>
+
 
 <!-- 
-The following section will be the HTML content of the form used to upload a route, which will take in user input and will be used by the javascript that follows this div section to display the user's submission. For now the input class is set to "hide" so that it doesn't immediately appear on the screen when the user is on the Routes page
--->
-
-<!--
-<div id="uploadRouteDiv" input class = "hide">
-  <h3 align="center">Route Details</h3>
-      <form action="<?php $_SERVER['PHP_SELF'] ?>" method="GET">
-
-        <label><b>Route Name</b></label>
-        <input type="text" name="routeName_input" id="routeName_input">
-        <br>
-
-        <label><b>Date</b></label>
-        <input type="text" name="date_input" id="date_input" maxlength="10">
-        <br>
-
-        <label><b>Distance</b></label>
-        <input type="number" name="distance_input" id="distance_input">
-        <br>
-
-        <label><b>Terrain</b></label>
-        <input type="text" name="terrain_input" id="terrain_input">
-        <br>
-
-        <label><b>Traffic</b></label>
-        <input type="text" name="traffic_input" id="traffic_input">
-        <br>
-
-
-        <label><b>Difficulty:</b></label>
-        <select id="difficulty_input" name="difficulty_input">
-                    <option value="Beginner">Beginner</option>
-                    <option value="Intermediate">Intermediate</option>
-                    <option value="Advanced">Advanced</option>
-                    <option value="Challenging">Challenging</option>
-        </select>
-    	  
-        <br>
-
-        <label><b>Route Image URL</b></label>
-        <input type="text" name="image_url_input" id="image_url_input">
-        <br>
-
-        <input type="submit"><br/>
-    </form>
-
-  
-  <p><span id='display'></span></p>
-</div>
-
 <script>
     /* For Displaying User Input Data from Upload Routes */
     /* Anonymous Function example */
@@ -113,41 +66,4 @@ The following section will be the HTML content of the form used to upload a rout
                     "Difficulty: " + document.getElementById("difficulty_input").value;
 
     }
-</script>
--->
-
-<?php
-
-/* At least 3 of these: */
-// Use array(s), may be one-dimensional arrays or multi-dimensional arrays
-// Use expressions
-// Use control structures (such as selection and loop)
-// Use predefined / standard / built-in function(s)
-
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
-
-  if (empty($_POST['routeName_input'])) {
-    echo 'Hello';
-    $routeName_input = $_POST['routeName_input'];
-  }
-  if (isset($_POST['date_input'])) {
-    if (strlen($_POST['date_input']) == 10) {
-      $date_input = $_POST['date_input']; // MM/DD/YYYY
-    }
-    echo 'Please use MM/DD/YYYY format for date.';
-  }
-  if (isset($_POST['distance_input'])) {
-    $distance_input = $_POST['distance_input']; //check if float, always in miles
-  }
-  // $terrain_input = $_POST['terrain_input']; // don't need validation: drop (road, sidewalk, track, trail, grassfield, turf, sand)
-  // $traffic_input = $_POST['traffic_input']; // don't need validation
-  // $difficulty_input = $_POST['difficulty_input']; // don't need validation
-  if (isset($_POST['image_url_input'])) {
-    $image_url_input = $_POST['image_url_input']; 
-  }
-}
-
-?>
-
-</body>
-</html>
+</script> -->
