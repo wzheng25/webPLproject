@@ -23,63 +23,63 @@ require('connect_DB.php');
   <script src="js/external.js"></script>
 </head>
 
+<!-- Navbar -->
+<div class="insertNavbar"></div> 
 
 <body>
-  <div class="insertNavbar"></div> <!-- Navbar -->
   <div id="uploadRouteDiv">
-  <h3 align="center" style="padding-top:20px">Route Details</h3>
-      <form class="routeForm" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+    <h3 align="center">Route Details</h3>
+    <form class="routeForm" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
 
-        <label><b>Route Name</b></label>
-        <input type="text" name="routeName_input" id="routeName_input" value="Run">
-        <br>
+      <label><b>Route Name:</b></label>
+      <input type="text" name="routeName_input" id="routeName_input" value="Run">
+      <br>
 
-        <label><b>Date</b></label>
-        <input type="text" name="date_input" id="date_input" maxlength="10" placeholder="MM/DD/YYYY" value="06/12/2018">
-        <br>
+      <label><b>Date:</b></label>
+      <input type="text" name="date_input" id="date_input" maxlength="10" placeholder="MM/DD/YYYY" value="06/12/2018">
+      <br>
 
-        <label><b>Distance</b></label>
-        <input type="number" step=".1" name="distance_input" id="distance_input" value="4">
-        <br>
+      <label><b>Distance: (mi.)</b></label>
+      <input type="number" step=".1" name="distance_input" id="distance_input" value="4">
+      <br>
 
-        <label><b>Terrain</b></label>
-        <select id="terrain_input" name="terrain_input">
-          <option value="Roads/Sidewalk">Roads/Sidewalk</option>
-          <option value="Trail">Trail</option>
-          <option value="Field">Field</option>
-          <option value="Track">Track</option>
-          <option value="Beach">Beach</option>
-        </select>
-        <br>
+      <label><b>Terrain:</b></label>
+      <select id="terrain_input" name="terrain_input">
+        <option value="Roads/Sidewalk">Roads/Sidewalk</option>
+        <option value="Trail">Trail</option>
+        <option value="Field">Field</option>
+        <option value="Track">Track</option>
+        <option value="Beach">Beach</option>
+      </select>
+      <br>
 
-        <label><b>Traffic</b></label>
-        <select id="traffic_input" name="traffic_input">
-          <option value="None">None</option>
-          <option value="Light">Light</option>
-          <option value="Moderate">Moderate</option>
-          <option value="Heavy">Heavy</option>
-        </select>
-        
-        <br>
+      <label><b>Traffic:</b></label>
+      <select id="traffic_input" name="traffic_input">
+        <option value="None">None</option>
+        <option value="Light">Light</option>
+        <option value="Moderate">Moderate</option>
+        <option value="Heavy">Heavy</option>
+      </select>
+      
+      <br>
 
-        <label><b>Difficulty:</b></label>
-        <select id="difficulty_input" name="difficulty_input">
-          <option value="Beginner">Beginner</option>
-          <option value="Intermediate">Intermediate</option>
-          <option value="Advanced">Advanced</option>
-          <option value="Challenging">Challenging</option>
-        </select>
-    	  
-        <br>
+      <label><b>Difficulty:</b></label>
+      <select id="difficulty_input" name="difficulty_input">
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+        <option value="Challenging">Challenging</option>
+      </select>
+  	  
+      <br>
 
-        <label><b>Route Image URL</b></label>
-        <input type="text" name="image_url_input" id="image_url_input" value="google.com">
-        
-        <br>
-        
-        <button class="submitRoute"type="submit">Submit</button>
-    </form>
-
+      <label><b>Route Image URL:</b></label>
+      <input type="text" name="image_url_input" id="image_url_input" value="google.com">
+      
+      <br>
+      
+    <button class="submitRoute"type="submit">Submit</button>
+  </form>
   <p><span id='display'></span></p>
 </div>
 

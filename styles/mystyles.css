@@ -40,7 +40,6 @@ form.form-inline {
   color: blue;
   font-size: 17px;
   border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
   cursor: pointer;
 }
 
@@ -212,13 +211,13 @@ select{
 }
 button.submitRoute{
     margin-top: 10px;
-    width: 15%;
+    width: 20%;
     background: #F8C471;
     color: blue;
     font-size: 17px;
     border: 1px solid grey;
     cursor: pointer;
     margin: 0 auto;
-    
+    border-radius: 4px;
 }
 
