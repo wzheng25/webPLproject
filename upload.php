@@ -40,7 +40,7 @@ require('connect_DB.php');
       <br>
 
       <label><b>Distance: (mi.)</b></label>
-      <input type="number" step=".1" name="distance_input" id="distance_input" value="4">
+      <input type="number" step=".01" name="distance_input" id="distance_input" value="4">
       <br>
 
       <label><b>Terrain:</b></label>

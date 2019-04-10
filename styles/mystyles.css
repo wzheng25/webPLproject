@@ -183,6 +183,24 @@ form.login {
 .routeButtons {
     text-align:center;
 }
+.browseBtn{
+    width: 20%;
+    background: #F8C471;
+    color: blue;
+    font-size: 17px;
+    border: 1px solid grey;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.uploadBtn{
+    width: 20%;
+    background: #F8C471;
+    color: blue;
+    font-size: 17px;
+    border: 1px solid grey;
+    cursor: pointer;
+    border-radius: 4px;
+}
 
 /* Upload.php: Form Styling */
 form.routeForm{
@@ -210,14 +228,12 @@ select{
     width:25%;
 }
 button.submitRoute{
-    margin-top: 10px;
     width: 20%;
     background: #F8C471;
     color: blue;
     font-size: 17px;
     border: 1px solid grey;
     cursor: pointer;
-    margin: 0 auto;
     border-radius: 4px;
 }
 
