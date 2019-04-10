@@ -25,8 +25,8 @@ require('connect_DB.php');
 
 
 <body>
-<div id="uploadRouteDiv">
   <div class="insertNavbar"></div> <!-- Navbar -->
+  <div id="uploadRouteDiv">
   <h3 align="center" style="padding-top:20px">Route Details</h3>
       <form class="routeForm" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
 
@@ -74,9 +74,10 @@ require('connect_DB.php');
 
         <label><b>Route Image URL</b></label>
         <input type="text" name="image_url_input" id="image_url_input" value="google.com">
+        
         <br>
-
-        <input type="submit"><br/>
+        
+        <button class="submitRoute"type="submit">Submit</button>
     </form>
 
   <p><span id='display'></span></p>
