@@ -78,7 +78,7 @@ require('connect_DB.php');
       
       <br>
       
-    <button class="submitRoute"type="submit">Submit</button>
+    <button class="submitRoute"type="submit">Submit Route</button>
   </form>
   <p><span id='display'></span></p>
 </div>

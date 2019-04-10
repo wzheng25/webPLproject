@@ -44,12 +44,24 @@ form.form-inline {
 }
 
 /* Comment CSS Style and Hide/Display feature */
-form.comment {
-	text-align: center;
-	padding-left: 300px;
-	padding-right: 300px;
-
+#commentImg{
+    cursor:pointer;
 }
+form.comment{
+    display: inline-flex;
+    text-align: center;
+}
+#commentbox{
+    width:50%;
+}
+#commentBtn {
+    background: #F8C471;
+    color: blue;
+    border: 1px solid grey;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
 
 /* Sections with the input class set to these will either appear or stay hidden */
 .hide{
