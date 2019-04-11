@@ -3,11 +3,10 @@
 This is a website for UVA's Web Programming Languages, CS 4640.
 
 To-Do list:
-1. maintainability: make an external JS file
-2. remember to add client-side form validation
-3. create db table
-4. everything in assignment 4
-5. complete login (maybe using google OAth)
+1. Logout
+2. Fetch DB routes and display
+3. User profile that shows your added routes?
+4. Cookies
 
 Server side stuff:
 1. fetch most recent time from db and put it on homepage
