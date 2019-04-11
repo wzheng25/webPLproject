@@ -45,6 +45,7 @@ if ($payload) {
 	$_SESSION['lastname'] = $lastname;
 	$_SESSION['picture'] = $picture;
 	$_SESSION['uploaded_routes'] = $uploaded_routes;
+	echo $_SESSION['picture'];
 
 	if (userExists($id) === FALSE) {
 		$sql = "INSERT INTO users (id, email, firstname, lastname, picture, uploaded_routes) VALUES ('$id', '$email', '$firstname', '$lastname', '$picture', '$uploaded_routes')";
@@ -79,5 +80,4 @@ function userExists($id) {
 		return FALSE;
 		}
 	}
-
 ?>

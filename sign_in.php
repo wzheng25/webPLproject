@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +19,7 @@
   <script src="js/jquery-latest.min.js"></script>
   <script> 
    $(function(){
-      $('.insertNavbar').load("navbar.html"); 
+      $('.insertNavbar').load("navbar.php"); 
    });
   </script>
   
@@ -64,7 +68,7 @@
     xhr.onload = function() {
       console.log(xhr.responseText);
       // Redirect
-      window.location.assign('index.html');
+      window.location.assign('index.php');
     }
   }
 </script>

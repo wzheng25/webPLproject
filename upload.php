@@ -1,5 +1,7 @@
 <?php
-require('connect_DB.php');
+session_start();
+require 'config.php';
+require 'connect_DB.php';
 ?>  
 
 <!DOCTYPE html>
@@ -16,7 +18,7 @@ require('connect_DB.php');
   <script src="js/jquery-latest.min.js"></script>
   <script> 
    $(function(){
-      $('.insertNavbar').load("navbar.html"); 
+      $('.insertNavbar').load("navbar.php"); 
    });
   </script>
   <!-- External JS file -->
@@ -100,22 +102,51 @@ require('connect_DB.php');
 
 <?php
 
-function uploadRoute($name, $date, $distance, $terrain, $traffic, $difficulty, $image) {
-   global $db;
-    
-   $query = "INSERT INTO routes (name, date, distance, terrain, traffic, difficulty, image) VALUES (:name, :date, :distance, :terrain, :traffic, :difficulty, :image)";
-   $statement = $db->prepare($query);
-   $statement->bindValue(':name', $name);
-   $statement->bindValue(':date', $date);
-   $statement->bindValue(':distance', $distance);
-   $statement->bindValue(':terrain', $terrain);
-   $statement->bindValue(':traffic', $traffic);
-   $statement->bindValue(':difficulty', $difficulty);
-   $statement->bindValue(':image', $image);
-   $statement->execute();
-   $statement->closeCursor();
-}
+function routeExists($image) {
+  require('config.php');
+  $connection = new mysqli($host, $username, $password, $dbname);
+  if ($connection->connect_error) {
+      die("Connection failed: " . $connection->connect_error);
+    }
+  $result = $connection->query("SELECT image FROM routes WHERE image = '$image'");
+  $connection->close();
+  //If a user exists, return true
+  if ($result->num_rows > 0) {
+    return TRUE;
+    }
+  else {
+    return FALSE;
+    }
+  }
 
+function uploadRoute($name, $date, $distance, $terrain, $traffic, $difficulty, $image) {
+  
+  $host = 'localhost';
+  $dbname = 'runcvilledb';
+  $username = 'webPLadmin';
+  $password = 'password';
+
+  $connection = new mysqli($host, $username, $password, $dbname);
+  if ($connection->connect_error) {
+    die("Connection failed: " . $connection->connect_error);
+  }
+  if (routeExists($image) === FALSE) {
+    $sql = "INSERT INTO routes (name, date, distance, terrain, traffic, difficulty, image) VALUES ('$name', '$date', '$distance', '$terrain', 
+    '$traffic', '$difficulty', '$image')";
+
+    if ($connection->query($sql)==TRUE){
+      echo "Route successfully uploaded!";
+    }
+    else{
+      echo "Error: " . $sql . "<br>" . $connection->error;
+    }
+    $connection->close();  
+  }
+  else {
+    echo 'Error: Route already exists.';
+    $connection->close();
+  }
+}
 
 //Input validation
 
@@ -161,7 +192,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   if (empty($_POST['image_url_input'])) {
     exit("Please enter an image url");
   }
-  $imageURL = $_POST['routeName_input'];
+  $imageURL = $_POST['image_url_input'];
 
   uploadRoute($routeName, $date, $distance, $terrain, $traffic, $difficulty, $imageURL);
 }

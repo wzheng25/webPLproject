@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,7 +14,7 @@
   <script src="js/jquery-latest.min.js"></script>
   <script> 
    $(function(){
-      $('.insertNavbar').load("navbar.html"); 
+      $('.insertNavbar').load("navbar.php"); 
    });
   </script>
   
@@ -33,11 +35,11 @@
 <form class="form-inline active-cyan-3 active-cyan-4">
     <i class="fas fa-search" aria-hidden="true"></i>
     <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search for a route" aria-label="Search" id="searchbar">
-    <button class="btn" type="submit"  formaction="./results.html">Search</button>
+    <button class="btn" type="submit"  formaction="./results.php">Search</button>
 </form>
 
 <div class="routeButtons">
-<button class="browseBtn" onclick="window.location='results.html'">Browse Routes</button>
+<button class="browseBtn" onclick="window.location='results.php'">Browse Routes</button>
 <button class="uploadBtn" onclick="window.location='upload.php'" >Upload Routes</button>
 </div>
 

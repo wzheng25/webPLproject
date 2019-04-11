@@ -27,8 +27,8 @@ session_start();
 
 
 
-<p>
-	This is Test User's profile.
+<p class="profile">
+  Welcome back, <?php echo $_SESSION['firstname']; ?>!
 </p>
 </body>
 </html>
