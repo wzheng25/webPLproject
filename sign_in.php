@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-signin-client_id" content="841498573297-3gk2m49j80fha913md4el35urgfk21rd.apps.googleusercontent.com">
+  <meta name="google-signin-client_id" content="841498573297-kcsuu19a9b5tme9q6mjrqpkgdf53587h.apps.googleusercontent.com">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="styles/mystyles.css"/>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -64,7 +64,7 @@
     xhr.onload = function() {
       console.log(xhr.responseText);
       // Redirect
-      //window.location.assign('index.html');
+      window.location.assign('index.html');
     }
   }
 </script>

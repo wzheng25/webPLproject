@@ -4,8 +4,8 @@ require 'ChromePhp.php';
 require_once 'vendor/autoload.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-	$MY_CLIENT_ID = '841498573297-3gk2m49j80fha913md4el35urgfk21rd.apps.googleusercontent.com';
-	$MY_CLIENT_SECRET = 'Ux2kybEbViQVVL_9PFy67zCx';
+	$MY_CLIENT_ID = '841498573297-kcsuu19a9b5tme9q6mjrqpkgdf53587h.apps.googleusercontent.com';
+	$MY_CLIENT_SECRET = 'yR9q8VIOCNnGOaY6JUnZQjzd';
 	ChromePhp::log("POST REACHED");
 
 	//Create Google Client Object
