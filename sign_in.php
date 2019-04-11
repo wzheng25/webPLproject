@@ -53,7 +53,12 @@ session_start();
   <!-- <input type="submit" href="index.html" value="Login"> -->
 <!-- </form>  -->
 
-<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<p class="g-signin-text">
+  Sign in with your Google account
+</p>
+<p class="border"></p>
+<div class="g-signin2" data-onsuccess="onSignIn">
+</div>
 
 </body>
 
