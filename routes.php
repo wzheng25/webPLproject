@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,10 +36,30 @@
     <button class="btn" type="submit"  formaction="./results.php">Search</button>
 </form>
 
+
+<?php
+session_start();
+
+if (isset($_SESSION['id'])) {
+  $href = "upload.php";
+  $text = "";
+}
+else {
+  $href = "";
+  $text = "Please sign in to upload a route";
+}
+?>
+
+
+
 <div class="routeButtons">
 <button class="browseBtn" onclick="window.location='results.php'">Browse Routes</button>
-<button class="uploadBtn" onclick="window.location='upload.php'" >Upload Routes</button>
+<button class="uploadBtn" onclick="window.location='<?php echo $href ?>'" >Upload Routes</button>
 </div>
+<p class="uploadError">
+  <br>
+  <?php echo $text; ?>
+</p>
 
 <script>
   /* For hiding/displaying form for uploading a route */

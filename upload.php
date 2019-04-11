@@ -194,6 +194,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   }
   $imageURL = $_POST['image_url_input'];
 
+  if (!isset($_SESSION['id'])) {
+    exit("You must be signed in to upload routes");
+  }
+
   uploadRoute($routeName, $date, $distance, $terrain, $traffic, $difficulty, $imageURL);
 }
 ?>

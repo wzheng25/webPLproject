@@ -60,21 +60,42 @@ $(document).ready(function(){
   </ul>
 </div>
 
+
+<!-- Check if a session exists and assign signin/logout text and profile picture accordingly -->
+
+<?php
+if (isset($_SESSION['id'])) {
+  $text = "Log out";
+  $picture = $_SESSION['picture']; 
+  $href = "log_out.php";
+  $href_profile = "profile.php";
+}
+else {
+  $text = "Sign in";
+  $picture = "https://s3.amazonaws.com/whisperinvest-images-prod/default-profile.png";
+  $href = "sign_in.php";
+  $href_profile = "";
+}
+?>
+
   <!-- Sign In Button and Profile Image -->
-    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="profile.php">
-          <img src="<?php echo $_SESSION['picture'] ?>" width="45px" height="45px">
-        </a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="sign_in.php" data-toggle="tooltip" data-placement="auto" title="Sign in">Sign in</a>
-      </li> 
-    </ul>
+
+<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="<?php echo $href_profile ?>">
+      <img src="<?php echo $picture ?>" width="45px" height="45px">
+    </a>
+  </li>
+  <li class="nav-item active">
+    <a class="nav-link" href="<?php echo $href ?>" data-toggle="tooltip" data-placement="auto" title="<?php echo $text ?>"><?php echo $text ?></a>
+  </li> 
+</ul>
+</div>
+    
     <!-- Links -->
 
-  </div>
+  
   <!-- Collapsible content -->
 
 </nav>
