@@ -34,15 +34,15 @@ require 'connect_DB.php';
     <form class="routeForm" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
 
       <label><b>Route Name:</b></label>
-      <input type="text" name="routeName_input" id="routeName_input" value="Run">
+      <input type="text" name="routeName_input" id="routeName_input">
       <br>
 
       <label><b>Date:</b></label>
-      <input type="text" name="date_input" id="date_input" maxlength="10" placeholder="MM/DD/YYYY" value="06/12/2018">
+      <input type="text" name="date_input" id="date_input" maxlength="10" placeholder="MM/DD/YYYY">
       <br>
 
-      <label><b>Distance: (mi.)</b></label>
-      <input type="number" step=".01" name="distance_input" id="distance_input" value="4">
+      <label><b>Distance (mi.):</b></label>
+      <input type="number" step=".01" name="distance_input" id="distance_input">
       <br>
 
       <label><b>Terrain:</b></label>
@@ -76,7 +76,7 @@ require 'connect_DB.php';
       <br>
 
       <label><b>Route Image URL:</b></label>
-      <input type="text" name="image_url_input" id="image_url_input" value="google.com">
+      <input type="text" name="image_url_input" id="image_url_input">
       
       <br>
       
