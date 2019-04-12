@@ -48,7 +48,7 @@ session_start();
 
 <div>
 	<?php
-	$host = 'localhost';
+		$host = 'localhost';
 		$dbname = 'runcvilledb';
 		$username = 'webPLadmin';
 		$password = 'password';
