@@ -45,7 +45,14 @@ if ($payload) {
 	$_SESSION['lastname'] = $lastname;
 	$_SESSION['picture'] = $picture;
 	$_SESSION['uploaded_routes'] = $uploaded_routes;
-	echo $_SESSION['picture'];
+	
+	// Set Cookies
+	setcookie('id', $id, time()+3600);
+	setcookie('email', $email, time()+3600);
+	setcookie('firstname', $firstname, time()+3600);
+	setcookie('lastname', $lastname, time()+3600);
+	setcookie('picture', $picture, time()+3600);
+	setcookie('uploaded_routes', $uploaded_routes, time()+3600);
 
 	if (userExists($id) === FALSE) {
 		$sql = "INSERT INTO users (id, email, firstname, lastname, picture, uploaded_routes) VALUES ('$id', '$email', '$firstname', '$lastname', '$picture', '$uploaded_routes')";

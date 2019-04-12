@@ -28,7 +28,7 @@ session_start();
 
 
 <p class="profile">
-  Welcome back, <?php echo $_SESSION['firstname']; ?>!
+  Welcome back, <?php echo $_SESSION['firstname'] . " " . $_COOKIE['lastname']; ?>!
 </p>
 </body>
 </html>
