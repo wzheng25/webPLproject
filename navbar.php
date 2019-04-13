@@ -60,7 +60,7 @@ $(document).ready(function(){
   </ul>
 </div>
 
-
+  
 <!-- Check if a session exists and assign signin/logout text and profile picture accordingly -->
 
 <?php
@@ -99,3 +99,20 @@ else {
   <!-- Collapsible content -->
 
 </nav>
+
+<!-- If cookies expire, unset session -->
+<?php
+if (!isset($_COOKIE['id'])) {
+  unset($_SESSION['id']);
+  unset($_SESSION['email']);
+  unset($_SESSION['firstname']);
+  unset($_SESSION['lastname']);
+  unset($_SESSION['picture']);
+  unset($_SESSION['uploaded_routes']);
+  ?>
+  <!-- <script type="text/javascript"> -->
+  <!-- document.location.href = "localhost/webPLproject/sign_in.php"; -->
+  <!-- </script> -->
+  <?php
+}
+?>
