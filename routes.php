@@ -54,7 +54,7 @@ else {
 
 <div class="routeButtons">
 <button class="browseBtn" onclick="window.location='results.php'">Browse Routes</button>
-<button class="uploadBtn" onclick="window.location='<?php echo $href ?>'" >Upload Routes</button>
+<button class="uploadBtn" onclick="window.location='<?php echo $href ?>'" >Upload Route</button>
 </div>
 <p class="uploadError">
   <br>
