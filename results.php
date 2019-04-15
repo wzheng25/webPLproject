@@ -59,8 +59,7 @@ session_start();
     </div>
 </a> -->
 
-<div id="search-results">
-</div>
+<div id="search-results"></div>
 
 <!-- Function to create routes by calling this function instead of typing it out as above -->
 <script>
@@ -112,7 +111,4 @@ $("#search-results").append("<a class='routeProfile-link' href=''> <div class='r
     mysqli_close($connection);
 ?>
 
-
-
-</body>
 </html>
