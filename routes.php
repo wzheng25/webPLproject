@@ -30,10 +30,10 @@
 </script>
 
 <!-- Searchbar -->
-<form class="form-inline active-cyan-3 active-cyan-4">
-    <i class="fas fa-search" aria-hidden="true"></i>
-    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search for a route" aria-label="Search" id="searchbar">
-    <button class="btn" type="submit"  formaction="./results.php">Search</button>
+<form class="form-inline active-cyan-3 active-cyan-4" method="GET" action="search_results.php" id="searchbar">
+    <i class="fas fa-search" aria-hidden="true" id="searchbar"></i>
+    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search for a route" aria-label="Search" id="searchbar" name="search_query">
+    <button class="btn" type="submit" id="searchbar" >Search</button>
 </form>
 
 

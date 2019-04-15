@@ -41,7 +41,6 @@ session_start();
 		<input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search for a route" aria-label="Search" id="searchbar" name="search_query">
 		<button class="btn" type="submit" id="searchbar" >Search</button>
 </form>
-
 <p class="index_text">
 	Check out this recently uploaded route!
 </p>
