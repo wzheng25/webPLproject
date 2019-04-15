@@ -43,7 +43,7 @@ session_start();
 </form>
 
 <p class="index_text">
-	Recently uploaded route:
+	Check out this recently uploaded route!
 </p>
 
 <div>
@@ -60,7 +60,8 @@ session_start();
 
 		$sql="SELECT name, date, distance, terrain, traffic, difficulty, image FROM routes";
 		if ($result=mysqli_query($connection, $sql)) {
-			while($row=mysqli_fetch_row($result)) {
+			// while($row=mysqli_fetch_row($result)) {
+				$row = mysqli_fetch_row($result);
 				$name = $row[0];
 				$date = $row[1];
 				$distance = $row[2];
@@ -69,7 +70,7 @@ session_start();
 				$difficulty = $row[5];
 				$image = $row[6];
 			}
-		}
+		// }
 		mysqli_free_result($result);
 		mysqli_close($connection);
 	?>
@@ -80,7 +81,7 @@ session_start();
 	            <h1><?php echo $name?></h1>
 	            <ul>
 	                <li><?php echo $date?></li>
-	                <li><?php echo $distance?> miles</li>
+	                <li><?php echo $distance?> mi.</li>
 	                <li><?php echo $terrain?></li>
 	                <li><?php echo $traffic?></li>
 	                <li><?php echo $difficulty?></li>

@@ -47,7 +47,7 @@ require 'connect_DB.php';
 
       <label><b>Terrain:</b></label>
       <select id="terrain_input" name="terrain_input">
-        <option value="Roads/Sidewalk">Roads/Sidewalk</option>
+        <option value="Roads+Sidewalk">Roads+Sidewalk</option>
         <option value="Trail">Trail</option>
         <option value="Field">Field</option>
         <option value="Track">Track</option>
@@ -135,7 +135,8 @@ function uploadRoute($name, $date, $distance, $terrain, $traffic, $difficulty, $
     '$traffic', '$difficulty', '$image')";
 
     if ($connection->query($sql)==TRUE){
-      echo "Route successfully uploaded!";
+      // echo "Route successfully uploaded!";
+      echo "";
     }
     else{
       echo "Error: " . $sql . "<br>" . $connection->error;
@@ -143,9 +144,43 @@ function uploadRoute($name, $date, $distance, $terrain, $traffic, $difficulty, $
     $connection->close();  
   }
   else {
-    echo 'Error: Route already exists.';
+    exit("Error: Route already exists.");
     $connection->close();
   }
+}
+
+function updateUploadedRoutes($name, $date, $distance, $terrain, $traffic, $difficulty, $image) {
+  $host = 'localhost';
+  $dbname = 'runcvilledb';
+  $username = 'webPLadmin';
+  $password = 'password';
+
+  $connection = new mysqli($host, $username, $password, $dbname);
+  if ($connection->connect_error) {
+    die("Connection failed: " . $connection->connect_error);
+  }
+  $userid = $_SESSION['id'];
+
+  $sql="SELECT * FROM users";
+  $result = $connection->query($sql);
+  if ($result->num_rows > 0) {
+   while ($row = $result->fetch_assoc()) {
+    if ($row['id'] == $userid) {
+      $old_uploaded = $row['uploaded_routes'];
+      // echo "Fetched old uploaded <br>";
+      // echo $old_uploaded;
+      $addition = $old_uploaded . $name.",".$date.",".$distance.",".$terrain.",".$traffic.",".$difficulty.",".$image."|";
+      // echo "New uploaded: <br>";
+      // echo $addition;
+      $sql = "UPDATE users SET uploaded_routes='$addition' WHERE id = $userid";
+      $result = $connection->query($sql);
+      if ($connection->query($sql)===TRUE){
+        echo "Route successfully uploaded <br><br><br><br><br><br><br><br><br><br>";
+      }
+    }
+   } 
+  }
+  $connection->close();  
 }
 
 //Input validation
@@ -199,6 +234,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   }
 
   uploadRoute($routeName, $date, $distance, $terrain, $traffic, $difficulty, $imageURL);
+  updateUploadedRoutes($routeName, $date, $distance, $terrain, $traffic, $difficulty, $imageURL);
 }
 ?>
 

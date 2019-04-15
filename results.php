@@ -65,7 +65,7 @@ session_start();
 <!-- Function to create routes by calling this function instead of typing it out as above -->
 <script>
 function createRoute(name, date, distance, terrain, traffic, difficulty, image) {
-$("#search-results").append("<a class='routeProfile-link' href=''> <div class='routeProfile'> <aside class='aside'> <h1>" + name + "</h1> <ul> <li>" + date + "</li> <li>" + distance + "</li> <li>" + terrain + "</li> <li>" + traffic + "</li> <li>" + difficulty + "</li> </ul> </aside> <div class='map'> <img src='" + image + "'> </div> </div></a>");
+$("#search-results").append("<a class='routeProfile-link' href=''> <div class='routeProfile'> <aside class='aside'> <h1>" + name + "</h1> <ul> <li>" + date + "</li> <li>" + distance + " mi. </li> <li>" + terrain + "</li> <li>" + traffic + "</li> <li>" + difficulty + "</li> </ul> </aside> <div class='map'> <img src='" + image + "'> </div> </div></a>");
 }
 </script>
 
