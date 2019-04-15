@@ -186,6 +186,9 @@ function updateUploadedRoutes($name, $date, $distance, $terrain, $traffic, $diff
 //Input validation
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
+  ?>
+  <div class=input-validation>
+  <?php
   if (empty($_POST['routeName_input'])) {
     exit("Please enter a route name");
   }
@@ -237,6 +240,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   updateUploadedRoutes($routeName, $date, $distance, $terrain, $traffic, $difficulty, $imageURL);
 }
 ?>
+</div>
 
 
 
