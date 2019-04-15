@@ -7,6 +7,7 @@ session_start();
   <head>
   <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta authors="Peter Felland and William Zheng">
   <meta name="google-signin-client_id" content="841498573297-kcsuu19a9b5tme9q6mjrqpkgdf53587h.apps.googleusercontent.com">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="styles/mystyles.css"/>

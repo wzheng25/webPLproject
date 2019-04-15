@@ -5,8 +5,9 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="utf-8">
+  	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta authors="Peter Felland and William Zheng">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="styles/mystyles.css"/>
 
@@ -59,7 +60,7 @@ session_start();
 
 		$sql="SELECT name, date, distance, terrain, traffic, difficulty, image FROM routes";
 		if ($result=mysqli_query($connection, $sql)) {
-			// while($row=mysqli_fetch_row($result)) {
+			// while($row=mysqli_fetch_row($result)) {;
 				$row = mysqli_fetch_row($result);
 				$name = $row[0];
 				$date = $row[1];
