@@ -77,7 +77,7 @@ $("#search-results").append("<a class='routeProfile-link' href=''> <div class='r
 
 
   /* Retrieving the Search Query from DATABASE */
-  $sql = "SELECT name, date, distance, terrain, traffic, difficulty, image FROM routes WHERE name LIKE '%" . $search_query .  "%'";
+  $sql = "SELECT name, date, distance, terrain, traffic, difficulty, image FROM routes WHERE (name LIKE '%".$search_query."%') OR (date LIKE '%".$search_query."%') OR (distance LIKE '%".$search_query."%') OR (terrain LIKE '%".$search_query."%') OR (traffic LIKE '%".$search_query."%') OR (difficulty LIKE '%".$search_query."%')";
   if ($result = mysqli_query($connection, $sql)){
     while ($row = mysqli_fetch_array($result)){
        $name = $row['name'];
