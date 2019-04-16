@@ -58,7 +58,7 @@ session_start();
 		die("Connection failed: " . $connection->connect_error);
 		}
 
-		$sql="SELECT name, date, distance, terrain, traffic, difficulty, image FROM routes";
+		$sql="SELECT name, date, distance, terrain, traffic, difficulty, image FROM routes ORDER BY date DESC";
 		if ($result=mysqli_query($connection, $sql)) {
 			// while($row=mysqli_fetch_row($result)) {;
 				$row = mysqli_fetch_row($result);
