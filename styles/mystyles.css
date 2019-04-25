@@ -73,12 +73,21 @@ form.comment{
 
 p.index_text {
     text-align: center;
+    font-size:18px;
+    font-weight:bold;
     padding-bottom: 30px;
 }
 
 p.profile {
     text-align: center;
     padding-top: 15px;
+    font-weight: bold;
+    font-size:24px;
+
+}
+
+h4.profile-routes-text {
+    text-align: center; 
 }
 
 p.g-signin-text {
@@ -105,6 +114,11 @@ div.g-signin2 {
     margin: auto;
     width: 13%;
 
+}
+
+div.input-validation {
+    text-align: center;
+    font-weight:bold;
 }
 
 img.stars {
